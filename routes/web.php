@@ -17,6 +17,8 @@ Route::get('/', function () {
     return redirect()->route('home-locale', app()->getLocale());
 })->name('home');
 
+Auth::routes(['register' => false]);
+
 Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[-a-zA-Z]+']], function () {
     Route::get('/', 'HomeController@index')->name('home-locale');
 
@@ -24,8 +26,6 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[-a-zA-Z]+']], fu
 });
 
 Route::post('article/{article}', 'HomeController@storeComment')->name('article.storeComment');
-
-Auth::routes(['register' => false]);
 
 Route::redirect('/home', '/');
 

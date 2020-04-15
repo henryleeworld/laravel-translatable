@@ -21,9 +21,9 @@ class ArticlesTableSeeder extends Seeder
         ]);
 
         Article::create([
-            'lt' => [
-                'title'     => 'Tik lietuviško straipsnio pavyzdys',
-                'full_text' => 'Tik lietuviško straipsnio pavyzdžio tekstas',
+            'zh-TW' => [
+                'title'     => '僅英文文章示例',
+                'full_text' => '僅英文文章示例的文字',
             ],
         ]);
 
@@ -32,9 +32,9 @@ class ArticlesTableSeeder extends Seeder
                 'title'     => 'English and Lithuanian article example',
                 'full_text' => 'English and Lithuanian article example\'s text',
             ],
-            'lt' => [
-                'title'     => 'Angliško ir lietuviško straipsnio pavyzdys',
-                'full_text' => 'Angliško ir lietuviško straipsnio pavyzdžio tekstas',
+            'zh-TW' => [
+                'title'     => '英文和立陶宛文示例',
+                'full_text' => '英文和立陶宛文示例的文字',
             ],
         ]);
     }
