@@ -1,4 +1,4 @@
-# Laravel 7 多國語系
+# Laravel 8 多國語系
 
 引入 astrotomic 的 laravel-translatable 套件來擴增 Eloquent 模型加上多語言支援的套件，適合一般需要多國語言對應的資料內容。
 
@@ -16,17 +16,23 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
 ```sh
-$ php artisan migrate --seed
+$ php artisan migrate
+```
+- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+```sh
+$ npm install && npm run dev
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
+- 你可以經由 `/register` 來進行註冊。
+- 完成註冊後，可以經由 `/login` 來進行登入。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/X04Ro1G.png)
-> 切換成繁體中文的語言對應
+![](https://i.imgur.com/t6JUlBI.png)
+> 選擇語言中的英文，切換成英文顯示語言
 
-![](https://i.imgur.com/vORI52t.png)
-> 留言畫面語言同時切換成繁體中文
+![](https://i.imgur.com/aPVUsHd.png)
+> 選擇語言中的繁體中文，切換成繁體中文顯示語言

@@ -13,29 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('home-locale', app()->getLocale());
-})->name('home');
-
-Auth::routes(['register' => false]);
-
-Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[-a-zA-Z]+']], function () {
-    Route::get('/', 'HomeController@index')->name('home-locale');
-
-    Route::get('article/{id}', 'HomeController@article')->name('article');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'index'])
+        ->name('dashboard');
+    Route::resource('posts', \App\Http\Controllers\PostController::class)
+        ->only('create', 'store');
 });
 
-Route::post('article/{article}', 'HomeController@storeComment')->name('article.storeComment');
-
-Route::redirect('/home', '/');
-
-Route::group(['middleware' => ['auth']], function () {
-    Route::resource('articles', 'ArticleController');
-
-    Route::get('comments/{comment}/reply', 'CommentController@reply')->name('comments.reply');
-
-    Route::post('comments/{comment}/reply', 'CommentController@storeReply')->name('comments.storeReply');
-
-    Route::resource('comments', 'CommentController');
-});
-
+require __DIR__.'/auth.php';

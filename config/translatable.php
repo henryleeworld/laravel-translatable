@@ -12,7 +12,7 @@ return [
     */
     'locales' => [
         'en',
-        'zh-TW',
+        'zh_TW',
     ],
 
     /*
