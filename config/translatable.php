@@ -12,6 +12,13 @@ return [
     */
     'locales' => [
         'en',
+        /*
+        'fr',
+        'es' => [
+            'MX', // mexican spanish
+            'CO', // colombian spanish
+        ],
+        */
         'zh_TW',
     ],
 

@@ -1,4 +1,4 @@
-# Laravel 8 多國語系
+# Laravel 10 多國語系
 
 引入 astrotomic 的 laravel-translatable 套件來擴增 Eloquent 模型加上多語言支援的套件，適合一般需要多國語言對應的資料內容。
 
@@ -31,8 +31,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/t6JUlBI.png)
+![](https://i.imgur.com/5320VtM.png)
 > 選擇語言中的英文，切換成英文顯示語言
 
-![](https://i.imgur.com/aPVUsHd.png)
+![](https://i.imgur.com/VNQY6nu.png)
 > 選擇語言中的繁體中文，切換成繁體中文顯示語言
