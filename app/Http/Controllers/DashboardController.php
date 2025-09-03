@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     public function index()
     {
@@ -13,6 +13,6 @@ class HomeController extends Controller
             ->latest()
             ->take(10)
             ->get();
-        return view('home', compact('posts'));
+        return view('dashboard', compact('posts'));
     }
 }

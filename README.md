@@ -1,4 +1,4 @@
-# Laravel 10 多國語系
+# Laravel 11 多國語系
 
 引入 astrotomic 的 laravel-translatable 套件來擴增 Eloquent 模型加上多語言支援的套件，適合一般需要多國語言對應的資料內容。
 
@@ -20,9 +20,13 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/register` 來進行註冊。
@@ -31,8 +35,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/5320VtM.png)
+![](https://i.imgur.com/5yjJCD0.png)
 > 選擇語言中的英文，切換成英文顯示語言
 
-![](https://i.imgur.com/VNQY6nu.png)
+![](https://i.imgur.com/D5b8AJB.png)
 > 選擇語言中的繁體中文，切換成繁體中文顯示語言

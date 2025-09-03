@@ -11,6 +11,11 @@ class Post extends Model implements TranslatableContract
 {
     use HasFactory, Translatable;
 
+    /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
     protected $guarded = ['id'];
     public $translatedAttributes = ['title', 'full_text'];
 }
