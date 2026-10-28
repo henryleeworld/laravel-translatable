@@ -9,12 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model implements TranslatableContract
 {
+    /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory, Translatable;
 
     /**
      * The attributes that aren't mass assignable.
      *
-     * @var array
+     * @var array<string>
      */
     protected $guarded = ['id'];
     public $translatedAttributes = ['title', 'full_text'];

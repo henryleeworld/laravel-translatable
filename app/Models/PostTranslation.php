@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PostTranslation extends Model
 {
+    /** @use HasFactory<\Database\Factories\PostTranslationFactory> */
     use HasFactory;
 
     /**
@@ -19,7 +20,7 @@ class PostTranslation extends Model
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = ['title', 'full_text'];
 }

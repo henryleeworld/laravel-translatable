@@ -17,7 +17,7 @@
                     </x-nav-link>
                     @foreach (config('translatable.locales') as $locale)
                     <x-nav-link :href="Request::fullUrlWithQuery(['language' => $locale])" :active="(app()->getLocale() == $locale)">
-                        {{ trans('frontend.locale.' . Str::lower($locale)) }}
+                        {{ __('frontend.locale.' . Str::lower($locale)) }}
                     </x-nav-link>
                     @endforeach
                 </div>
@@ -77,7 +77,7 @@
             </x-responsive-nav-link>
             @foreach (config('translatable.locales') as $locale)
             <x-responsive-nav-link :href="Request::fullUrlWithQuery(['language' => $locale])" :active="(app()->getLocale() == $locale)">
-                {{ trans('frontend.locale.' . Str::lower($locale)) }}
+                {{ __('frontend.locale.' . Str::lower($locale)) }}
             </x-responsive-nav-link>
             @endforeach
         </div>
