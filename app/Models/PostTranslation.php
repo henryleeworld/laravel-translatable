@@ -2,25 +2,16 @@
 
 namespace App\Models;
 
+use Database\Factories\PostTranslationFactory;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Table;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+#[Fillable(['title', 'full_text'])]
+#[Table(timestamps: false)]
 class PostTranslation extends Model
 {
-    /** @use HasFactory<\Database\Factories\PostTranslationFactory> */
+    /** @use HasFactory<PostTranslationFactory> */
     use HasFactory;
-
-    /**
-     * Indicates if the model should be timestamped.
-     *
-     * @var bool
-     */
-    public $timestamps = false;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    protected $fillable = ['title', 'full_text'];
 }

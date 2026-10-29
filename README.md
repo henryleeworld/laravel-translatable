@@ -1,4 +1,4 @@
-# Laravel 12 多國語系
+# Laravel 13 多國語系
 
 引入 astrotomic 的 laravel-translatable 套件來擴增 Eloquent 模型加上多語言支援的套件，適合一般需要多國語言對應的資料內容。
 
@@ -35,8 +35,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/uk9gNy5.png)
+![](https://i.imgur.com/xgsqUYe.png)
 > 選擇語言中的英文，切換成英文顯示語言
 
-![](https://i.imgur.com/NRgNMwt.png)
+![](https://i.imgur.com/dXHl3OF.png)
 > 選擇語言中的繁體中文，切換成繁體中文顯示語言
